@@ -38,7 +38,7 @@ function onClickImg(event) {
 
   const datasetSource = event.target.dataset.source;
 
-  if (!datasetSource) return;
+  if (event.target.tagName !== "IMG") return;
 
   instance.element().querySelector("img").src = datasetSource;
   instance.show();
